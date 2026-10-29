@@ -1,0 +1,6 @@
+<div class="status-container">
+  <span class="badge" [ngClass]="isOnline ? 'online' : 'offline'">
+    {{ isOnline ? '🟢 Online' : '🔴 Offline' }}
+  </span>
+  <button (click)="toggleStatus()">Toggle Status</button>
+</div>

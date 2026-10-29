@@ -1,12 +1,20 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { UserCardComponent } from './components/user-card/user-card';
+import { User } from './models/user.model';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [UserCardComponent],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('AngularApp1');
+export class AppComponent {
+  currentUser: User = {
+    name: 'Walied Albassiry',
+    age: 24,
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Walied',
+    bio: 'Full-stack Web & Mobile Application Developer working with Angular and TypeScript.',
+    isOnline: true
+  };
 }

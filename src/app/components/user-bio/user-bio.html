@@ -1,0 +1,15 @@
+<div class="bio-card">
+  <h3>About Me</h3>
+  <div *ngIf="!isEditing; else editTemplate">
+    <p>{{ bio }}</p>
+    <button (click)="enableEdit()">Edit Bio</button>
+  </div>
+
+  <ng-template #editTemplate>
+    <textarea [(ngModel)]="tempBio" rows="3"></textarea>
+    <div class="action-buttons">
+      <button class="save-btn" (click)="saveBio()">Save</button>
+      <button class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+    </div>
+  </ng-template>
+</div>

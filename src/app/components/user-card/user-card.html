@@ -1,0 +1,15 @@
+<div class="card" *ngIf="user">
+  <img [src]="user.avatar" alt="Profile Picture" class="avatar" />
+  <h2>{{ user.name }}</h2>
+  <p class="age">Age: {{ user.age }}</p>
+
+  <app-user-status 
+    [isOnline]="user.isOnline" 
+    (statusChanged)="handleStatusChange($event)">
+  </app-user-status>
+
+  <app-user-bio 
+    [bio]="user.bio" 
+    (bioUpdated)="handleBioUpdate($event)">
+  </app-user-bio>
+</div>

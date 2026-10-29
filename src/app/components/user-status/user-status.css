@@ -1,0 +1,5 @@
+.status-container { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.badge { padding: 6px 12px; border-radius: 12px; font-weight: bold; }
+.online { background-color: #d4edda; color: #155724; }
+.offline { background-color: #f8d7da; color: #721c24; }
+button { padding: 6px 14px; border: none; border-radius: 6px; background-color: #007bff; color: white; cursor: pointer; }
